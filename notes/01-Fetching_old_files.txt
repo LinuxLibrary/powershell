@@ -1,0 +1,10 @@
+get-childitem .\*\sent\* | format-table Directory, name, lastwritetime -autosize
+
+get-childitem:
+	This tag will helps to fetch all the sub-directories, fetch all the files.
+
+format-table:
+	This tag will helps to format the output into a table in the order we specify.
+
+autosize:
+	This tag will helps to get the complete text of the column without being chunked.
