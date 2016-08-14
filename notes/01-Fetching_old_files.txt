@@ -8,3 +8,8 @@ format-table:
 
 autosize:
 	This tag will helps to get the complete text of the column without being chunked.
+
+get-childitem .\*\sent\* | format-table Directory | get-unique
+
+get-unique:
+	This tag will help to get the unique output.
