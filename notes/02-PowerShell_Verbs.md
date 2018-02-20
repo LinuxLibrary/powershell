@@ -2,23 +2,23 @@
 
 - To create something new
 
-	> New
+	`New`
 
 - To list or show
 
-	> Get
+	`Get`
 
 - Change some characteristics
 
-	> Set
+	`Set`
 
 - Remove something
 
-	> Remove
+	`Remove`
 
 - Get all the verbs
 
-	> Get-Verb
+	`Get-Verb`
 
 ---
 
@@ -26,17 +26,19 @@
 
 - To rename a VM
 
-	> Rename-VM -Name "VM1" -NewName "WebVM1"
+	`Rename-VM -Name "VM1" -NewName "WebVM1"`
 
 - To rename computer
 
-	> Rename-Computer -Name "PC24" -NewName "AccountsPC"
+	`Rename-Computer -Name "PC24" -NewName "AccountsPC"`
 
 ---
 
 # Shortening POSH CmdLets
 
 - These are the shorter alias name of the commands
-- Import-Module
 
-	> ipmo
+	```
+	Import-Module
+	ipmo
+	```
