@@ -1,14 +1,14 @@
 # POSH Examples
 
-	`Set-ADUser -Identity ArjunShrinivas -Title "Admin"`
+	- `Set-ADUser -Identity ArjunShrinivas -Title "Admin"`
 
-	`Get-ADUser -Filter {Enabled -eq $false}`
+	- `Get-ADUser -Filter {Enabled -eq $false}`
 
-	`Add-Printer -Connect \\Server3\Printer03`
+	- `Add-Printer -Connect \\Server3\Printer03`
 
-	`Restart-Computer`
+	- `Restart-Computer`
 
-	`Disable-WindowsOptionalFeature -Feature WindowsMediaPlayer`
+	- `Disable-WindowsOptionalFeature -Feature WindowsMediaPlayer`
 
 # Discovering Commands
 
