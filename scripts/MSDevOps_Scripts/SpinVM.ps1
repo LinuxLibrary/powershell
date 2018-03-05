@@ -47,7 +47,7 @@ $octoconf = "c:\FTPFiles\octoconf.ps1"
 $old_path = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).Path
 $new_path = $old_path + ';' + 'C:\opscode\chef\bin\'+';'+'C:\Program Files\Octopus Deploy\Tentacle'
 
-$scriptset = "Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH –Value '$new_path'"
+$scriptset = "Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value '$new_path'"
 
 Invoke-VMScript -ScriptText $scriptcopy -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
 Start-Sleep 60
@@ -62,10 +62,11 @@ Start-Sleep 40
 Invoke-VMScript -ScriptText $scriptnug -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
 Start-Sleep 30
 Invoke-VMScript -ScriptText $scriptOcto -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
-Start-Sleep 40
+#Start-Sleep 40
 Invoke-VMScript -ScriptText $octoconf -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
-Start-Sleep 30
+#Start-Sleep 30
 Invoke-VMScript -ScriptText $scriptset -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
-Start-Sleep 20
+#Start-Sleep 20
+Invoke-Command -ComputerName $myIP -FilePath "C:\MSDevOps\GitLabs\PS-Scripts\Octopus_Config_Tentacle.ps1" -Credential $Cred
+#Start-Sleep 60
 Invoke-Command -ComputerName $myIP -ScriptBlock {C:\opscode\chef\bin\chef-client.bat} -Credential $Cred
-
