@@ -1,5 +1,5 @@
 Add-PSSnapin VMware*
-Connect-VIServer -Server "150.150.150.17" -User "administrator@vsphere.local" -Password "Atmecs@123"
+Connect-VIServer -Server "150.150.150.17" -User "administrator@vsphere.local" -Password "XXXXXXXX"
 New-VM -Name DevOps-Dev-Dep1 -Template DevOps_Template -VMHost "150.150.150.9"
 Start-VM -VM DevOps-Dev-Dep1
 start-sleep 180
