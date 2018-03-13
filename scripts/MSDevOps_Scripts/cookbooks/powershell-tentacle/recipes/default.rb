@@ -70,9 +70,11 @@ powershell_script 'RegisterTentacle' do
  	$endpoint = new-object Octopus.Client.OctopusServerEndpoint $OctopusServerURL, $OctopusAPI
  	$repository = new-object Octopus.Client.OctopusRepository $endpoint
 
- 	$tentacle = New-Object Octopus.Client.Model.MachineResource
-
- 	$tentacle.name = Hostname
+	$Random = -join ((65..90) + (97..122) | Get-Random -Count 8 | % {[char]$_})
+	$Hostname = ($Hostname -Replace [Environment]::NewLine,"").ToString() + '-' + $Random
+ 
+	$tentacle = New-Object Octopus.Client.Model.MachineResource
+ 	$tentacle.name = $Hostname
  	$tentacle.EnvironmentIds.Clear()
  	$tentacle.EnvironmentIds.Add($OctoEnv)
  	$tentacle.Roles.Clear()
@@ -86,5 +88,3 @@ powershell_script 'RegisterTentacle' do
  	$repository.machines.create($tentacle)
 	EOH
 end
-
-
