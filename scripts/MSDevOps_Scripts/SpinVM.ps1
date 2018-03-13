@@ -1,6 +1,6 @@
 Add-PSSnapin VMware*
-Connect-VIServer -Server "150.150.150.17" -User "administrator@vsphere.local" -Password "XXXXXXXX"
-New-VM -Name DevOps-Dev-Dep1 -Template DevOps_Template -VMHost "150.150.150.9"
+Connect-VIServer -Server "150.150.150.17" -User "administrator@vsphere.local" -Password "Atmecs@123"
+New-VM -Name DevOps-Dev-Dep1 -Template DevOps_Template -VMHost "150.150.150.9" -OSCustomizationSpec "DevOps_CustSpec"
 Start-VM -VM DevOps-Dev-Dep1
 start-sleep 180
 $vm = Get-VM -Name DevOps-Dev-Dep1
@@ -53,21 +53,21 @@ Invoke-VMScript -ScriptText $scriptmove -VM $DevDep1 -GuestUser $UserName -Guest
 Start-Sleep 20
 
 #### Edit client.rb to change node name ####
-#$Hostname = Invoke-VMScript -ScriptText "Hostname" -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
+$Hostname = Invoke-VMScript -ScriptText "Hostname" -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
 $NodeNum = $myIP.Replace('.','')
 $Random = -join ((65..90) + (97..122) | Get-Random -Count 8 | % {[char]$_})
-#$Hostname = ($Hostname -Replace [Environment]::NewLine,"").ToString() + '-' + $Random
-$TentaNode = 'Tentacle-' + $Random
+$Hostname = ($Hostname -Replace [Environment]::NewLine,"").ToString() + '-' + $Random
+#$TentaNode = 'Tentacle-' + $Random
 #$Hostname = 'Tentacle-' + $NodeNum
 
 $ChefNode = ('a-cf-node').ToString()
-$scriptclienthost = "(Get-Content C:\chef\client.rb) -Replace '$ChefNode', '$TentaNode' | Set-Content C:\chef\client.rb"
+$scriptclienthost = "(Get-Content C:\chef\client.rb) -Replace '$ChefNode', '$Hostname' | Set-Content C:\chef\client.rb"
 Invoke-VMScript -ScriptText $scriptclienthost -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
 
 
 $scriptchef = "Start-Process msiexec.exe -ArgumentList @('/qn', '/lv C:\FTPFiles\chef-log.txt', '/i C:\FTPFiles\chefclient.msi') -NoNewWindow -Wait"
 Invoke-VMScript -ScriptText $scriptchef -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
-Start-Sleep 180
+Start-Sleep 220
 
 $old_path = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).Path
 $new_path = $old_path + ';' + 'C:\opscode\chef\bin\'+';'+'C:\Program Files\Octopus Deploy\Tentacle'
@@ -83,6 +83,8 @@ Start-Sleep 10
 #Invoke-VMScript -ScriptText $octoconf -VM $DevDep1 -GuestUser $UserName -GuestPassword $Password
 #Start-Sleep 50
 
-Invoke-Command -ComputerName $myIP -ScriptBlock {C:\opscode\chef\bin\chef-client.bat} -Credential $Cred
-Invoke-Command -ComputerName $myIP -ScriptBlock {"knife node run_list set '$TentaNode' 'recipe['powershell-tantacle']'"} -Credential $Cred
-Invoke-Command -ComputerName $myIP -ScriptBlock {C:\opscode\chef\bin\chef-client.bat} -Credential $Cred
+#Invoke-Command -ComputerName $myIP -ScriptBlock {C:\opscode\chef\bin\chef-client.bat} -Credential $Cred
+#Invoke-Command -ComputerName $myIP -ScriptBlock {"knife node run_list set '$TentaNode' 'recipe['powershell-tantacle']'"} -Credential $Cred
+#Invoke-Command -ComputerName $myIP -ScriptBlock {C:\opscode\chef\bin\chef-client.bat} -Credential $Cred
+
+Invoke-Command -ComputerName $myIP -ScriptBlock {chef-client -o recipe[powershell-tentacle]} -Credential $Cred
