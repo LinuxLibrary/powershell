@@ -7,11 +7,11 @@ Function StopServices {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "wkelms\rao.besetti"
-    $RPasswd = "ArjunWK_119"
+    $RUser = "lldev\vmsnivas"
+    $RPasswd = "XX-PASS-XX"
     $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
     $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\HOUT3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
@@ -39,11 +39,11 @@ Function CreateFolders {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "wkelms\rao.besetti"
-    $RPasswd = "ArjunWK_119"
+    $RUser = "lldev\vmsnivas"
+    $RPasswd = "XX-PASS-XX"
     $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
     $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\HOUT3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
@@ -89,11 +89,11 @@ Function StartServices {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "wkelms\rao.besetti"
-    $RPasswd = "ArjunWK_119"
+    $RUser = "lldev\vmsnivas"
+    $RPasswd = "XX-PASS-XX"
     $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
     $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\HOUT3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
@@ -120,11 +120,11 @@ Function VerifyServices {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "wkelms\rao.besetti"
-    $RPasswd = "ArjunWK_119"
+    $RUser = "lldev\vmsnivas"
+    $RPasswd = "XX-PASS-XX"
     $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
     $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\HOUT3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
