@@ -1,0 +1,120 @@
+{
+	"Servers": [{
+			"Name": "HOUT3P1WEB01",
+			"Services": [
+				"ESET Service",
+				"IIS Admin Service",
+				"Net Driver HPZ12",
+				"Redgate Client"
+			],
+			"Folders": [{
+					"Name": "Enterprise Services",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Services\\20.1.112.0-release-next",
+					"Dest": "WIS_DEP\\Enterprise Services"
+				},
+				{
+					"Name": "Help",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Help\\20.0.145.0",
+					"Dest": "WIS_DEP\\Help"
+				},
+				{
+					"Name": "WebUI",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\WebUI\\20.1.112.0-release-next",
+					"Dest": "WIS_DEP\\WebUI"
+				},
+				{
+					"Name": "Workflow",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Workflow\\20.1.112.0-release-next",
+					"Dest": "WIS_DEP\\Workflow"
+				}
+			]
+		},
+		{
+			"Name": "HOUT3P1WEB02",
+			"Services": [
+				"OctopusDeploy",
+				"Net Driver HPZ12",
+				"RPC Endpoint Mapper"
+			],
+			"Folders": [{
+					"Name": "Enterprise Services",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Services\\20.1.112.0-release-next",
+					"Dest": "WIS_DEP\\Enterprise Services"
+				},
+				{
+					"Name": "Help",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Help\\20.0.145.0",
+					"Dest": "WIS_DEP\\Help"
+				},
+				{
+					"Name": "WebUI",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\WebUI\\20.1.112.0-release-next",
+					"Dest": "WIS_DEP\\WebUI"
+				},
+				{
+					"Name": "Workflow",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Workflow\\20.1.112.0-release-next",
+					"Dest": "WIS_DEP\\Workflow"
+				}
+			]
+		},
+		{
+			"Name": "HOUT3P1APP01",
+			"Services": [
+				"DHCP Client",
+				"DNS Client",
+				"Group Policy Client"
+			],
+			"Folders": [{
+					"Name": "Email to Matter Services",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Email to Matter Services",
+					"Dest": "WIS_DEP\\Email to Matter Services"
+				},
+				{
+					"Name": "Scheduler",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Scheduler",
+					"Dest": "WIS_DEP\\Scheduler"
+				},
+				{
+					"Name": "T360 Utilities",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\T360 Utilities",
+					"Dest": "WIS_DEP\\T360 Utilities"
+				},
+				{
+					"Name": "Worksite Integration Service",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Worksite Integration Service",
+					"Dest": "WIS_DEP\\Worksite Integration Service"
+				}
+			]
+		},
+		{
+			"Name": "HOUT3P1APP02",
+			"Services": [
+				"Message Queuing",
+				"Net Driver HPZ12",
+				"RPC Endpoint Mapper"
+			],
+			"Folders": [{
+					"Name": "Email to Matter Services",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Email to Matter Services",
+					"Dest": "WIS_DEP\\Email to Matter Services"
+				},
+				{
+					"Name": "Scheduler",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Scheduler",
+					"Dest": "WIS_DEP\\Scheduler"
+				},
+				{
+					"Name": "T360 Utilities",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\T360 Utilities",
+					"Dest": "WIS_DEP\\T360 Utilities"
+				},
+				{
+					"Name": "Worksite Integration Service",
+					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Worksite Integration Service",
+					"Dest": "WIS_DEP\\Worksite Integration Service"
+				}
+			]
+		}
+	]
+}
