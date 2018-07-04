@@ -7,17 +7,17 @@ Function StopServices {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "lldev\vmsnivas"
-    $RPasswd = "XX-PASS-XX"
-    $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
-    $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+	$RUser = "lldev\vmsnivas"
+	$RPasswd = "XX-PASS-XX"
+	$RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
+	$RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
+	New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
 	foreach ($Server in $JsonObject.Servers){
 		$Services = $Server.Services
-        $RComp = $Server.Name
+        	$RComp = $Server.Name
 		if ($Services -ne $null) {
 			if ($Server.Name -eq $name) {
 				foreach ($Service in $Services){
@@ -39,25 +39,25 @@ Function CreateFolders {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "lldev\vmsnivas"
-    $RPasswd = "XX-PASS-XX"
-    $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
-    $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+	$RUser = "lldev\vmsnivas"
+	$RPasswd = "XX-PASS-XX"
+	$RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
+	$RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
+	New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
 	foreach ($Server in $JsonObject.Servers){
 		$Folders = $Server.Folders
-        $Drive = (Get-PSDrive -PSProvider FileSystem).Name[-2]
+        	$Drive = (Get-PSDrive -PSProvider FileSystem).Name[-2]
 		$Path = Write-Output $Drive":"
-        $RComp = $Server.Name
+        	$RComp = $Server.Name
 		if ($RComp -eq $name){
 			foreach ($Folder in $Folders){
 				$FolderName = $Folder.Name
 				$SrcPath = $Folder.Src
 				$DestPath = $Folder.Dest
-                Write-Host "$RComp - $FolderName - $Path\$DestPath"
+                		Write-Host "$RComp - $FolderName - $Path\$DestPath"
 				try{
 					if (Test-Path -Path "$Path\$DestPath") {
 						Write-Host "INFO: Cleaning up $Path\$DestPath ..."
@@ -72,9 +72,9 @@ Function CreateFolders {
 					New-Item -Path "$Path\" -Name "$DestPath" -ItemType "directory" > $null
 				}
 				Write-Host "Copying data from DropLocation to $Path\$DestPath"
-                New-PSDrive -Name Y -PSProvider FileSystem -Root $SrcPath -Credential $RCred > $null
+		                New-PSDrive -Name Y -PSProvider FileSystem -Root $SrcPath -Credential $RCred > $null
 				Copy-Item Y:\* -Destination "$Path\$DestPath\" -Recurse > $null
-                Remove-PSDrive Y -Force
+        		        Remove-PSDrive Y -Force
 		    }
 	    }
     }
@@ -89,11 +89,11 @@ Function StartServices {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "lldev\vmsnivas"
-    $RPasswd = "XX-PASS-XX"
-    $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
-    $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+	$RUser = "lldev\vmsnivas"
+	$RPasswd = "XX-PASS-XX"
+	$RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
+	$RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
+	New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
@@ -120,11 +120,11 @@ Function VerifyServices {
 	Finally{
 		Write-Host ""
 	}
-    $RUser = "lldev\vmsnivas"
-    $RPasswd = "XX-PASS-XX"
-    $RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
-    $RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
-    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
+	$RUser = "lldev\vmsnivas"
+	$RPasswd = "XX-PASS-XX"
+	$RPass = ConvertTo-SecureString -AsPlainText $RPasswd -Force
+	$RCred = New-Object System.Management.Automation.PSCredential -ArgumentList $RUser,$RPass
+	New-PSDrive -Name Z -PSProvider FileSystem -Root "\\LLDEV3P1WEB01\WIS_FOLDER" -Credential $RCred > $null
 	$File = Get-Content "Z:\Automation\Conf\SList.json" -Raw
 	$JsonObject = $File | ConvertFrom-Json
 	$name = hostname
