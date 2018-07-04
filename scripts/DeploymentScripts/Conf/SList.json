@@ -1,6 +1,6 @@
 {
 	"Servers": [{
-			"Name": "HOUT3P1WEB01",
+			"Name": "LLDEV3P1WEB01",
 			"Services": [
 				"ESET Service",
 				"IIS Admin Service",
@@ -9,28 +9,28 @@
 			],
 			"Folders": [{
 					"Name": "Enterprise Services",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Services\\20.1.112.0-release-next",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Security\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\Enterprise Services"
 				},
 				{
 					"Name": "Help",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Help\\20.0.145.0",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Help\\20.0.145.0",
 					"Dest": "WIS_DEP\\Help"
 				},
 				{
 					"Name": "WebUI",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\WebUI\\20.1.112.0-release-next",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\WebUI\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\WebUI"
 				},
 				{
 					"Name": "Workflow",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Workflow\\20.1.112.0-release-next",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Workflow\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\Workflow"
 				}
 			]
 		},
 		{
-			"Name": "HOUT3P1WEB02",
+			"Name": "LLDEV3P1WEB02",
 			"Services": [
 				"OctopusDeploy",
 				"Net Driver HPZ12",
@@ -38,28 +38,28 @@
 			],
 			"Folders": [{
 					"Name": "Enterprise Services",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Services\\20.1.112.0-release-next",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Security\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\Enterprise Services"
 				},
 				{
 					"Name": "Help",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Help\\20.0.145.0",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Help\\20.0.145.0",
 					"Dest": "WIS_DEP\\Help"
 				},
 				{
 					"Name": "WebUI",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\WebUI\\20.1.112.0-release-next",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\WebUI\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\WebUI"
 				},
 				{
 					"Name": "Workflow",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Workflow\\20.1.112.0-release-next",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Workflow\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\Workflow"
 				}
 			]
 		},
 		{
-			"Name": "HOUT3P1APP01",
+			"Name": "LLDEV3P1APP01",
 			"Services": [
 				"DHCP Client",
 				"DNS Client",
@@ -67,28 +67,28 @@
 			],
 			"Folders": [{
 					"Name": "Email to Matter Services",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Email to Matter Services",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Catalog Services",
 					"Dest": "WIS_DEP\\Email to Matter Services"
 				},
 				{
 					"Name": "Scheduler",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Scheduler",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Scheduler",
 					"Dest": "WIS_DEP\\Scheduler"
 				},
 				{
 					"Name": "T360 Utilities",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\T360 Utilities",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\LL Utilities",
 					"Dest": "WIS_DEP\\T360 Utilities"
 				},
 				{
 					"Name": "Worksite Integration Service",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Worksite Integration Service",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Integration Service",
 					"Dest": "WIS_DEP\\Worksite Integration Service"
 				}
 			]
 		},
 		{
-			"Name": "HOUT3P1APP02",
+			"Name": "LLDEV3P1APP02",
 			"Services": [
 				"Message Queuing",
 				"Net Driver HPZ12",
@@ -96,22 +96,22 @@
 			],
 			"Folders": [{
 					"Name": "Email to Matter Services",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Email to Matter Services",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Catalog Services",
 					"Dest": "WIS_DEP\\Email to Matter Services"
 				},
 				{
 					"Name": "Scheduler",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Scheduler",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Scheduler",
 					"Dest": "WIS_DEP\\Scheduler"
 				},
 				{
 					"Name": "T360 Utilities",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\T360 Utilities",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\LL Utilities",
 					"Dest": "WIS_DEP\\T360 Utilities"
 				},
 				{
 					"Name": "Worksite Integration Service",
-					"Src": "\\\\houdrop01\\drop\\OfflineDrops\\IADStaging\\iadtyuapp01\\IAD-Staging\\IAD-Staging\\Worksite Integration Service",
+					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Integration Service",
 					"Dest": "WIS_DEP\\Worksite Integration Service"
 				}
 			]
