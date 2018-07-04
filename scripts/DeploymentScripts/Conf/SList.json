@@ -8,7 +8,7 @@
 				"Redgate Client"
 			],
 			"Folders": [{
-					"Name": "Enterprise Services",
+					"Name": "Enterprise Security",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Security\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\Enterprise Services"
 				},
@@ -37,7 +37,7 @@
 				"RPC Endpoint Mapper"
 			],
 			"Folders": [{
-					"Name": "Enterprise Services",
+					"Name": "Enterprise Security",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\IADTYUWEB01\\IAD-Staging\\IAD-Staging\\Enterprise Security\\20.1.112.0-release-next",
 					"Dest": "WIS_DEP\\Enterprise Services"
 				},
@@ -66,7 +66,7 @@
 				"Group Policy Client"
 			],
 			"Folders": [{
-					"Name": "Email to Matter Services",
+					"Name": "Catalog Services",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Catalog Services",
 					"Dest": "WIS_DEP\\Email to Matter Services"
 				},
@@ -76,12 +76,12 @@
 					"Dest": "WIS_DEP\\Scheduler"
 				},
 				{
-					"Name": "T360 Utilities",
+					"Name": "LL Utilities",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\LL Utilities",
 					"Dest": "WIS_DEP\\T360 Utilities"
 				},
 				{
-					"Name": "Worksite Integration Service",
+					"Name": "Integration Service",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Integration Service",
 					"Dest": "WIS_DEP\\Worksite Integration Service"
 				}
@@ -95,7 +95,7 @@
 				"RPC Endpoint Mapper"
 			],
 			"Folders": [{
-					"Name": "Email to Matter Services",
+					"Name": "Catalog Services",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Catalog Services",
 					"Dest": "WIS_DEP\\Email to Matter Services"
 				},
@@ -105,12 +105,12 @@
 					"Dest": "WIS_DEP\\Scheduler"
 				},
 				{
-					"Name": "T360 Utilities",
+					"Name": "LL Utilities",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\LL Utilities",
 					"Dest": "WIS_DEP\\T360 Utilities"
 				},
 				{
-					"Name": "Worksite Integration Service",
+					"Name": "Integration Service",
 					"Src": "\\\\lldevdrop01\\drop\\OfflineDrops\\IADStaging\\lldevapp01\\IAD-Staging\\IAD-Staging\\Integration Service",
 					"Dest": "WIS_DEP\\Worksite Integration Service"
 				}
